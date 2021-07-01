@@ -5,11 +5,9 @@ html{
 
 
 body{
-    background-color: rgba(54,155,179);
-    background-image: url(images/bg1.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(rgb(17, 212, 196), rgb(22, 43, 238));
     background-repeat: no-repeat;
+    background-color: rgb(22, 43, 238);
     text-align: center;
 }
 
@@ -36,7 +34,7 @@ padding-left: 20%;
 padding-right: 20%;
 height: fit-content;
 text-align: center;
-width: 100%;
+width: 60%;
 }
 
 nav ul{
@@ -89,7 +87,7 @@ nav a {
 
 h2 a{
 
-color: rgba(40,180,230);
+color: rgb(128, 25, 0);
 font-size: medium;
 
 }
@@ -117,26 +115,55 @@ main h1{
   color: white;
 }
 
+.menu_button{display: none;}
+
 @media only screen and (max-width: 400px) {
 
+
+html{height: 100%;}
+ 
+
+  header{
+    height: 50px;
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .menu_button{
+    display: inline;
+  height: fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  background:none;
+  }
+
+  nav{display: none;}
+  
 .image1{
 
   display: none;
 }
 
-
-header{display: none;}
-
-.widgets ul{
+.widgets{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-row-gap: 10px;
 }
 
 .maps{text-align: center;}
 .youtube{text-align: center;}
 
+
+
+footer{width: fill;}
+
 }
 
-.container{text-align: center;}
+
 
