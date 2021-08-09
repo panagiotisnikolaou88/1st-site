@@ -15,13 +15,15 @@
 <div class="container">
 
     <header>
-        <button class="menu_button">
+        <button class="menu_button" id="menu_button">
             <i class="material-icons">menu</i>
         </button>
         <div class="image1">
         <img src="images/appstore.png" alt="Apple Logo">
         </div>
     </header>
+
+
 
     <nav>
         <ul>
@@ -35,15 +37,25 @@
 
     </nav>
 
-    <main>
+    <div id="side_menu" class="nav_phone">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Truss</a></li>
+            <li><a href="">Beam</a></li>
+            <li><a href="">Airtag</a></li>
+            <li><a href="">Android</a></li>
+        </ul>
+    </div>
+
+    <main id="main">
         <h1>
             App Store
         </h1>
         <h2><a href="mailto:pan.nik636@gmail.com?Subject=Reservation">Make Reservation</a></h2>
         <p>This is the main text.</p>
-    </main>
 
-    <section class="widgets">
+        <section class="widgets">
 
       
             <div class="maps">
@@ -57,10 +69,16 @@
 
 
 </section>
+    </main>
+
+ 
     <footer>
         <p class="footer_text">This is the footer section</p>
     </footer>
 </div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>

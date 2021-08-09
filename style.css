@@ -33,6 +33,8 @@ nav{
 padding-left: 20%;
 padding-right: 20%;
 height: fit-content;
+padding-top: 1.5px;
+padding-bottom: 1.5px;
 text-align: center;
 width: 60%;
 }
@@ -51,7 +53,11 @@ nav li{
   background-color: none;
   margin-left: auto;
   margin-right: auto;
+  border: orangered;
+  border-style:solid;
 }
+
+nav li:hover{background-color: gray;}
 
 main{
 padding-top: 0px;
@@ -65,7 +71,7 @@ width: 100%;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
-
+height: 5%;
 }
 
 .footer_text{
@@ -93,18 +99,17 @@ font-size: medium;
 }
 
 .widgets{
+width: 100%;
 padding-bottom: 10%;
 padding-top: 10%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr;
+grid-column-gap: 30px;
 }
 
-.widgets ul{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-.maps{text-align: center;}
-.youtube{text-align: center;}
+.maps iframe{float: right;}
+.youtube iframe{float: left;}
 
 main p{
 
@@ -117,6 +122,17 @@ main h1{
 
 .menu_button{display: none;}
 
+
+
+
+@media only screen and (min-width: 400px) {
+
+
+  html{height: 100%;}
+
+  .nav_phone{display: none;}
+
+}
 @media only screen and (max-width: 400px) {
 
 
@@ -130,6 +146,7 @@ html{height: 100%;}
     grid-template-rows: 1fr;
   }
   
+  
   .menu_button{
     display: inline;
   height: fit-content;
@@ -140,10 +157,55 @@ html{height: 100%;}
   margin-bottom: auto;
   border: none;
   background:none;
+  cursor: pointer;
   }
 
-  nav{display: none;}
+  nav{
+    display: none;
+    }
+
+.nav_phone{display: none;}
+.nav_phone.show{display:block;}
+
+
+
+  .nav_phone ul{ 
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: fit-content;
+  }
+
+  .nav_phone li{
+    border:none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: fit-content;
+  }
+
+  .nav_phone li a{  
+    text-decoration: none;
+    color: blanchedalmond;
+  }
+
+  .nav_phone li a:hover{color: gray;}
+
+
+
+.nav_phone{
+
+ 
+z-index: 1;
+background-color: black;
+opacity: 0.9;
+overflow-x: hidden;
+padding: none;
+margin:none;
+height: 100%;
+}
   
+
 .image1{
 
   display: none;
@@ -154,14 +216,18 @@ html{height: 100%;}
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-row-gap: 10px;
+  grid-column-gap: 0;
+
 }
 
-.maps{text-align: center;}
-.youtube{text-align: center;}
+.maps iframe{float: none;}
+.youtube iframe{float: none;}
 
 
 
-footer{width: fill;}
+footer{width: fill;
+
+}
 
 }
 
