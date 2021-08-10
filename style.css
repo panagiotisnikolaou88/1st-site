@@ -25,6 +25,26 @@ text-align: center;
   width: fit-content;
   padding-top:20px;
   padding-bottom: 10px;
+  
+
+}
+
+.overlay{
+
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+background-color: black;
+
+}
+
+.image1:hover.overlay{
+
+opacity: 1;
 
 }
 
@@ -136,13 +156,17 @@ main h1{
 @media only screen and (max-width: 400px) {
 
 
+
 html{height: 100%;}
  
+main{
+
+}
 
   header{
     height: 50px;
     display: grid;
-    grid-template-columns: 15% 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
   
@@ -158,29 +182,33 @@ html{height: 100%;}
   border: none;
   background:none;
   cursor: pointer;
+  z-index: 2;
   }
 
   nav{
     display: none;
     }
 
-.nav_phone{display: none;}
-.nav_phone.show{display:block;}
-
 
 
   .nav_phone ul{ 
-    list-style: none;
+   
+    
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-left: auto;
+   margin-right: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    width: fit-content;
+  padding: 0;
+    grid-row-gap: 70px;
+
+
   }
 
   .nav_phone li{
     border:none;
-    padding-top: 4px;
-    padding-bottom: 4px;
     width: fit-content;
   }
 
@@ -195,7 +223,14 @@ html{height: 100%;}
 
 .nav_phone{
 
- 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 1fr;
+
+left: 0;
+top: 0;
+width: 0;
+position: fixed;
 z-index: 1;
 background-color: black;
 opacity: 0.9;
@@ -203,6 +238,21 @@ overflow-x: hidden;
 padding: none;
 margin:none;
 height: 100%;
+transition: 0.5s;
+
+}
+
+.nav_phone_button{
+  z-index: 2;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  border: none;
+  color: white;
+  
 }
   
 
@@ -230,6 +280,8 @@ footer{width: fill;
 }
 
 }
+
+
 
 
 
